@@ -1,0 +1,16 @@
+{
+    "name": "Python UV Dev Container",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+      "vscode": {
+        "settings": {},
+        "extensions": [
+          "ms-python.python"
+        ]
+      }
+    },
+    "postCreateCommand": "[ ! -f pyproject.toml ] && uv sync || echo 'pyproject.toml found, skipping uv sync'"
+  }
+  
