@@ -1,5 +1,6 @@
 # Django-Practice
 Learning Django by implementing a simple RESTful api and a data ingestion server
+- [📘 Progress and Learning Notes](./progress-tracker.md)
 # 🐍 FastAPI Best Practices — Data Ingestion Pipeline
 
 This project is a **FastAPI server** built to demonstrate **best practices** in designing clean, testable, and maintainable Python backends — especially focused on building **data ingestion pipelines**.
