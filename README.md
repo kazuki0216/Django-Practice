@@ -1,5 +1,5 @@
 # Django-Practice
-Learning Django by implementing a simple data ingestion server
+Learning Django by implementing a simple RESTful api and a data ingestion server
 # 🐍 FastAPI Best Practices — Data Ingestion Pipeline
 
 This project is a **FastAPI server** built to demonstrate **best practices** in designing clean, testable, and maintainable Python backends — especially focused on building **data ingestion pipelines**.
@@ -28,7 +28,7 @@ It’s not tied to any specific product or frontend. The goal is to showcase:
 
 ## 📦 Features
 
-- Best practices from [Kraken Flex's Python guidelines](https://github.com/krakenflex/engineering-guidelines) applied throughout
+- Best practices from [Kraken Flex's Python guidelines](https://github.com/octoenergy/public-conventions) applied throughout
 - Clean API structure (no framework opinions on directory structure)
 - Third-party API integration
 - Custom data ingestion and transformation logic
