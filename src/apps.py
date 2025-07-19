@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class TechnologiesConfig(AppConfig):
+class CafeConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'technologies'
+    name = 'src'
