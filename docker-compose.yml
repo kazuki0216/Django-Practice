@@ -1,0 +1,20 @@
+services:
+
+  db:
+    image: postgres:15
+    container_name: postgres-db
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: django_cafe
+    ports:
+      - "8080:5432"
+    networks:
+      - django-practice
+
+networks:
+  django-practice:
+    name: django-practice
+    driver: bridge
