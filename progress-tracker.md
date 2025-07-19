@@ -9,13 +9,14 @@
 | Date       | Task / Feature Built                 | What I Learned / Notes                         |
 |------------|--------------------------------------|------------------------------------------------|
 | 2025-07-14th | Created Django project and app       | `startapp`, basic URL routing                  |
+| 2025-07-16th | Connecting a database to the app       | How databases work with Django.                  |
 
 
 ---
 
 ## 🧠 Concept Memo
 
-Use this section to write down *concepts you learned*, in your own words.  
+Use this section to write down *concepts you learned*, in your own words.  v
 Think of it like flashcards for yourself.
 
 ---

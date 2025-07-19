@@ -2,6 +2,7 @@
 __pycache__/
 *.py[codz]
 *$py.class
+.pg_service.conf
 
 # C extensions
 *.so

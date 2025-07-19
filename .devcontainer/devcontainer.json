@@ -3,11 +3,13 @@
     "build": {
       "dockerfile": "Dockerfile"
     },
+    "runArgs": ["--network=django-practice"],
     "customizations": {
       "vscode": {
         "settings": {},
         "extensions": [
-          "ms-python.python"
+          "ms-python.python",
+          "cweijan.vscode-postgresql-client2"
         ]
       }
     },
