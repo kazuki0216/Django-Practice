@@ -1,15 +1,18 @@
 from django.db import models
 from . import menu, customer
 
+
 class DrinkSizeMetadata(models.TextChoices):
     SMALL = "SMALL", "Small"
-    TALL = "TALL","Tall"
+    TALL = "TALL", "Tall"
     GRANDE = "GRANDE", "Grande"
     VENTI = "VENTI", "Venti"
+
 
 class DrinkType(models.TextChoices):
     HOT = "HOT", "Hot"
     COLD = "COLD", "Cold"
+
 
 class Order(models.Model):
     menu_item = models.ForeignKey(menu.Menu, on_delete=models.CASCADE)

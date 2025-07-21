@@ -1,10 +1,12 @@
 from django.db import models
 from . import customer
 
+
 class SubscriptionStatus(models.TextChoices):
-    ACTIVE="ACTIVE", "Active"
-    CANCELED="CANCELED", "Canceled"
-    EXPIRED="EXPIRED", "Expired"
+    ACTIVE = "ACTIVE", "Active"
+    CANCELED = "CANCELED", "Canceled"
+    EXPIRED = "EXPIRED", "Expired"
+
 
 class Subscription(models.Model):
     customer = models.ForeignKey(customer.Customer, on_delete=models.CASCADE)

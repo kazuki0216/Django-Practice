@@ -4,29 +4,28 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('src', '0002_rename_payments_payment_and_more'),
+        ("src", "0002_rename_payments_payment_and_more"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='MenuItem',
-            new_name='Menu',
+            old_name="MenuItem",
+            new_name="Menu",
         ),
         migrations.RenameField(
-            model_name='menu',
-            old_name='descriptioin',
-            new_name='description',
+            model_name="menu",
+            old_name="descriptioin",
+            new_name="description",
         ),
         migrations.RenameField(
-            model_name='subscription',
-            old_name='expiration_date',
-            new_name='expired_at',
+            model_name="subscription",
+            old_name="expiration_date",
+            new_name="expired_at",
         ),
         migrations.RenameField(
-            model_name='subscription',
-            old_name='start_date',
-            new_name='started_at',
+            model_name="subscription",
+            old_name="start_date",
+            new_name="started_at",
         ),
     ]
