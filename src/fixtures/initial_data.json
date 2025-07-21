@@ -1,0 +1,53 @@
+[
+    {
+      "model": "src.menu",
+      "pk": 1,
+      "fields": {
+        "name": "Espresso",
+        "price": 3.5,
+        "description": "Strong and rich coffee shot.",
+        "available": true
+      }
+    },
+    {
+      "model": "src.menu",
+      "pk": 2,
+      "fields": {
+        "name": "Latte",
+        "price": 4.2,
+        "description": "Espresso with steamed milk and foam.",
+        "available": true
+      }
+    },
+    {
+      "model": "src.menu",
+      "pk": 3,
+      "fields": {
+        "name": "Cappuccino",
+        "price": 4.0,
+        "description": "Rich espresso with frothy milk.",
+        "available": true
+      }
+    },
+    {
+      "model": "src.menu",
+      "pk": 4,
+      "fields": {
+        "name": "Mocha",
+        "price": 4.5,
+        "description": "Espresso with chocolate and milk.",
+        "available": true
+      }
+    },
+    {
+      "model": "src.menu",
+      "pk": 5,
+      "fields": {
+        "name": "Iced Coffee",
+        "price": 3.8,
+        "description": "Chilled coffee over ice.",
+        "available": true
+      }
+    }
+  ]
+  

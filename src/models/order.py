@@ -12,7 +12,7 @@ class DrinkType(models.TextChoices):
     COLD = "COLD", "Cold"
 
 class Order(models.Model):
-    menu_item = models.ForeignKey(menu.MenuItem, on_delete=models.CASCADE)
+    menu_item = models.ForeignKey(menu.Menu, on_delete=models.CASCADE)
     customer = models.ForeignKey(customer.Customer, on_delete=models.CASCADE)
     drink_type = models.CharField(max_length=5, choices=DrinkType.choices)
     size = models.CharField(max_length=128, choices=DrinkSizeMetadata.choices)

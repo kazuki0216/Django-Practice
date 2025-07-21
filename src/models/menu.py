@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class MenuItem(models.Model):
+class Menu(models.Model):
     name = models.CharField(max_length=128)
     price = models.FloatField()
     description = models.TextField()
