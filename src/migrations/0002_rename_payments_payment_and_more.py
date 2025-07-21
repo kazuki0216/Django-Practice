@@ -5,32 +5,65 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('src', '0001_initial'),
+        ("src", "0001_initial"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='Payments',
-            new_name='Payment',
+            old_name="Payments",
+            new_name="Payment",
         ),
         migrations.RenameModel(
-            old_name='Subscriptions',
-            new_name='Subscription',
+            old_name="Subscriptions",
+            new_name="Subscription",
         ),
         migrations.CreateModel(
-            name='Order',
+            name="Order",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('drink_type', models.CharField(choices=[('HOT', 'Hot'), ('COLD', 'Cold')], max_length=5)),
-                ('size', models.CharField(choices=[('SMALL', 'Small'), ('TALL', 'Tall'), ('GRANDE', 'Grande'), ('VENTI', 'Venti')], max_length=128)),
-                ('ordered_at', models.DateTimeField(auto_now_add=True)),
-                ('customer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='src.customer')),
-                ('menu_item', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='src.menuitem')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "drink_type",
+                    models.CharField(
+                        choices=[("HOT", "Hot"), ("COLD", "Cold")], max_length=5
+                    ),
+                ),
+                (
+                    "size",
+                    models.CharField(
+                        choices=[
+                            ("SMALL", "Small"),
+                            ("TALL", "Tall"),
+                            ("GRANDE", "Grande"),
+                            ("VENTI", "Venti"),
+                        ],
+                        max_length=128,
+                    ),
+                ),
+                ("ordered_at", models.DateTimeField(auto_now_add=True)),
+                (
+                    "customer",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="src.customer"
+                    ),
+                ),
+                (
+                    "menu_item",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="src.menuitem"
+                    ),
+                ),
             ],
         ),
         migrations.DeleteModel(
-            name='Orders',
+            name="Orders",
         ),
     ]
