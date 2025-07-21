@@ -1,7 +1,7 @@
 name: Lint/Formatter
 
 on:
-  pull_request:
+  push:
 
 jobs:
   lint-and-test:
