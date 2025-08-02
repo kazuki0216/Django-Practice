@@ -1,0 +1,18 @@
+
+{
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "none", 
+  "editor.defaultFormatter": "esbenp.prettier-vscode", 
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.formatOnSaveTimeout": 2000,
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.py$",
+        "cmd": "uv run ruff format ."
+      }
+    ]
+  }
+}

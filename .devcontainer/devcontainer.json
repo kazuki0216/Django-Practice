@@ -9,7 +9,8 @@
         "settings": {},
         "extensions": [
           "ms-python.python",
-          "cweijan.vscode-postgresql-client2"
+          "cweijan.vscode-postgresql-client2",
+          "emeraldwalk.RunOnSave"
         ]
       }
     },
