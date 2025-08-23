@@ -6,10 +6,30 @@
     "runArgs": ["--network=django-practice"],
     "customizations": {
       "vscode": {
-        "settings": {},
+        "settings": {
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "[python]": {
+            "editor.defaultFormatter": "charliermarsh.ruff",
+            "editor.formatOnSave": true,
+            "editor.codeActionsOnSave": {
+              "source.organizeImports": "explicit"
+            }
+          },
+          "ruff.format.args": ["--line-length=88"],
+          "ruff.lint.args": ["--fix"],
+          "ruff.organizeImports": true
+        },
         "extensions": [
           "ms-python.python",
-          "cweijan.vscode-postgresql-client2"
+          "cweijan.vscode-postgresql-client2",
+          "ms-python.black-formatter",
+          "cweijan.vscode-mysql-client2",
+          "ms-python.vscode-pylance",
+          "ms-python.python-typehint",
+          "ms-python.vscode-pylance",
+          "ms-python.vscode-pylance",
+          "charliermarsh.ruff"
         ]
       }
     },

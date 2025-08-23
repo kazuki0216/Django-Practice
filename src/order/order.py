@@ -1,5 +1,7 @@
 from django.db import models
-from . import menu, customer
+
+from ..customer import customer
+from ..menu import menu
 
 
 class DrinkSizeMetadata(models.TextChoices):

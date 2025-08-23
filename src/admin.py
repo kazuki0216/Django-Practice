@@ -1,6 +1,10 @@
 from django.contrib import admin
 
-from .models import customer, subscription, order, menu, payment
+from .customer import customer
+from .menu import menu
+from .order import order
+from .payment import payment
+from .subscription import subscription
 
 # Register your models here.
 admin.site.register(customer.Customer)

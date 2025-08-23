@@ -1,8 +1,13 @@
-from django.urls import path
+from django.urls import include, path
+from rest_framework.routers import SimpleRouter
 
-from . import views
+from .customer import views
+
+router = SimpleRouter(trailing_slash=False)
+router.register(r"customers", views.CustomerView, basename="customer")
+
 
 urlpatterns = [
-    path("menu", views.cafe_menu, name="cafe_menu"),
-    path("order", views.order, name="order"),
+    path("", include(router.urls)),
+    path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
 ]

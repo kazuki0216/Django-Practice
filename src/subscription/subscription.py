@@ -1,5 +1,6 @@
 from django.db import models
-from . import customer
+
+from ..customer import customer
 
 
 class SubscriptionStatus(models.TextChoices):
