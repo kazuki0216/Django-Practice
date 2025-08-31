@@ -1,7 +1,7 @@
 from django.db import models
 
-from ..customer import customer
-from ..menu import menu
+from .customer import Customer
+from .menu import Menu
 
 
 class DrinkSizeMetadata(models.TextChoices):
@@ -17,8 +17,8 @@ class DrinkType(models.TextChoices):
 
 
 class Order(models.Model):
-    menu_item = models.ForeignKey(menu.Menu, on_delete=models.CASCADE)
-    customer = models.ForeignKey(customer.Customer, on_delete=models.CASCADE)
+    menu_item = models.ForeignKey(Menu, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     drink_type = models.CharField(max_length=5, choices=DrinkType.choices)
     size = models.CharField(max_length=128, choices=DrinkSizeMetadata.choices)
     ordered_at = models.DateTimeField(auto_now_add=True)

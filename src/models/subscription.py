@@ -1,6 +1,6 @@
 from django.db import models
 
-from ..customer import customer
+from .customer import Customer
 
 
 class SubscriptionStatus(models.TextChoices):
@@ -10,7 +10,7 @@ class SubscriptionStatus(models.TextChoices):
 
 
 class Subscription(models.Model):
-    customer = models.ForeignKey(customer.Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     started_at = models.DateTimeField(auto_now_add=True)
     expired_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=128, choices=SubscriptionStatus.choices)

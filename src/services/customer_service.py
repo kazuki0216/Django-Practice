@@ -1,7 +1,7 @@
 from django.db import DatabaseError
 
+from ..models import Customer
 from ..schema.customer import CustomerCreateRequest
-from .customer import Customer
 
 
 def insert_new_customer(information: CustomerCreateRequest):

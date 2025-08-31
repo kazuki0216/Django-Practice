@@ -1,6 +1,6 @@
 from django.db import models
 
-from ..customer import customer
+from .customer import Customer
 
 
 class PaymentMethod(models.TextChoices):
@@ -16,7 +16,7 @@ class PaymentStatus(models.TextChoices):
 
 
 class Payment(models.Model):
-    customer = models.ForeignKey(customer.Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     amount = models.FloatField()
     payment_date = models.DateTimeField(auto_now_add=True)
     method = models.CharField(max_length=128, choices=PaymentMethod.choices)

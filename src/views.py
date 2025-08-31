@@ -2,9 +2,9 @@ from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from .customer import Customer
-from .customer_serializer import CustomerSerializer
-from .customer_service import get_customer_info
+from .models import Customer, Menu
+from .serializers import CustomerSerializer, MenuSerializer
+from .services import get_customer_info
 
 
 class CustomerView(viewsets.ModelViewSet):
@@ -67,3 +67,8 @@ class CustomerView(viewsets.ModelViewSet):
             return Response(data=serializer.data, status=status.HTTP_200_OK)
         except Exception as e:
             return Response(f"An error occured {e}", status=500)
+
+
+class MenuView(viewsets.ModelViewSet):
+    queryset = Menu.objects.all().order_by("name")
+    serializer_class = MenuSerializer
