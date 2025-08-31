@@ -35,16 +35,16 @@ class CustomerView(viewsets.ModelViewSet):
             username = request.headers.get("user-name")
             email = request.headers.get("user-email")
             customer = get_customer_info(name=username, email=email)
-
-            if not customer.exists():
+            if not customer:
                 return Response(
                     {"message": "No matching customers found"},
                     status=status.HTTP_404_NOT_FOUND,
                 )
-            serializer = self.serializer_class(customer, many=True)
+            print(customer)
+            serializer = self.serializer_class(customer)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Exception as e:
-            return Response(content=f"An error occured {e}", status=500)
+            return Response(f"An error occured {e}", status=500)
 
     @action(detail=False, methods=["put"], url_path="update")
     def update_customer(self, request):

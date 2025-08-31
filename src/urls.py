@@ -3,8 +3,8 @@ from rest_framework.routers import SimpleRouter
 
 from .customer import views
 
-router = SimpleRouter(trailing_slash=False)
-router.register(r"customers", views.CustomerView, basename="customer")
+router = SimpleRouter(trailing_slash=True)
+router.register(r"customers", views.CustomerView)
 
 
 urlpatterns = [
